@@ -1,0 +1,46 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: Amibroker AFL
+scopeName: source.afl
+fileTypes: [afl]
+uuid: a7eb1086-5594-43ff-9fb8-0ef1545d2825
+
+patterns:
+- comment: Pre Processors
+  name: keyword.other.afl
+  match: (?i)^\s*(#(include_once|include|pragma).*$)
+- comment: Math functions
+
+Int - integer part
+log - natural logarithm
+log10 - decimal logarithm
+Max - maximum value of two numbers / arrays
+Min - minimum value of two numbers / arrays
+Prec - adjust number of decimal points of floating point number
+Round - round number to nearest integer
+sign - returns the sign of the number/array (AFL 2.50)
+sin - sine function
+sinh - hyperbolic sine function (AFL 2.80)
+sqrt - square root
+tan - tangent function (AFL 1.0)
+tanh - hyperbolic tangent function (AFL 2.80)
+  name: keyword.other.afl
+  match: (?i)\b(abs|acos|AlmostEqual|asin|atan|atan2|ceil|cos|cosh|EXP|floor|frac|)\b
+- comment: Default functions
+  name: keyword.other.afl
+  match: (?i)\b(AccDist|AddColumn|AddRankColumn|AddSummaryRows|AddTextColumn|AddToComposite|ADLine|AdvIssues|AdvVolume|ADX|AlertIf|AMA|AMA2|ApplyStop|Asc|ATR|BarIndex|BarsSince|BBandBot|BBandTop|BeginValue|CategoryAddSymbol|CategoryCreate|CategoryFind|CategoryGetName|CategoryGetSymbols|CategoryRemoveSymbol|CategorySetName|CCI|Chaikin|ClipboardGet|ClipboardSet|ColorBlend|ColorHSB|ColorRGB|Correlation|CreateObject|CreateStaticObject|Cross|Cum|Date|DateNum|DateTime|DateTimeAdd|DateTimeConvert|DateTimeDiff|DateTimeToStr|Day|DayOfWeek|DayOfYear|DaysSince1900|DecIssues|DecVolume|DEMA|EMA|EnableRotationalTrading|EnableScript|EnableTextOutput|EncodeColor|EndValue|Equity|Error|ExRem|ExRemSpan|fclose|fdelete|fdir|feof|FFT|fgets|fgetstatus|FIR|FirstVisibleValue|Flip|fmkdir|fopen|Foreign|fputs|frmdir|FullName|GapDown|GapUp|GetAsyncKeyState|GetBacktesterObject|GetBaseIndex|GetCategorySymbols|GetChartBkColor|GetChartID|GetCursorMouseButtons|GetCursorXPosition|GetCursorYPosition|GetDatabaseName|GetExtraData|GetFnData|GetFormulaPath|GetOption|GetPerformanceCounter|GetPlaybackDateTime|GetPriceStyle|GetRTData|GetRTDataForeign|GetScriptObject|GetTradingInterface|GfxArc|GfxChord|GfxCircle|GfxDrawText|GfxEllipse|GfxGetTextWidth|GfxGradientRect|GfxLineTo|GfxMoveTo|GfxPie|GfxPolygon|GfxPolyline|GfxRectangle|GfxRoundRect|GfxSelectFont|GfxSelectPen|GfxSelectSolidBrush|GfxSetBkColor|GfxSetBkMode|GfxSetCoordsMode|GfxSetOverlayMode|GfxSetPixel|GfxSetTextAlign|GfxSetTextColor|GfxSetZOrder|GfxTextOut|GicsID|GroupID|HHV|HHVBars|Highest|HighestBars|HighestSince|HighestSinceBars|HighestVisibleValue|HMA|Hold|Hour|IcbID|IIf|IndustryID|InGICS|InICB|Inside|Int|Interval|InWatchList|InWatchListName|IsContinuous|IsEmpty|IsFavorite|IsFinite|IsIndex|IsNan|IsNull|IsTrue|LastValue|LastVisibleValue|LineArray|LinearReg|LinRegIntercept|LinRegSlope|LLV|LLVBars|log|log10|Lookup|Lowest|LowestBars|LowestSince|LowestSinceBars|LowestVisibleValue|MA|MACD|MarketID|Max|MDI|Median|MFI|MicroSec|MilliSec|Min|Minute|Month|mtRandom|mtRandomA|Name|NoteGet|NoteSet|Now|NullCount|NumToStr|NVI|Nz|OBV|Optimize|OptimizerSetEngine|OptimizerSetOption|OscP|OscV|Outside|Param|ParamColor|ParamDate|ParamField|ParamList|ParamStr|ParamStyle|ParamTime|ParamToggle|ParamTrigger|PDI|Peak|PeakBars|Percentile|PercentRank|PlaySound|Plot|PlotForeign|PlotGrid|PlotOHLC|PlotShapes|PlotText|PlotTextSetFont|PlotVAPOverlay|PlotVAPOverlayA|PopupWindow|Prec|Prefs|printf|PVI|Random|Ref|RelStrength|RequestTimedRefresh|RestorePriceArrays|Reverse|RMI|ROC|Round|RSI|RWI|RWIHi|RWILo|SAR|Say|Second|SectorID|SelectedValue|SendEmail|SetBacktestMode|SetBarFillColor|SetBarsRequired|SetChartBkColor|SetChartBkGradientFill|SetChartOptions|SetCustomBacktestProc|SetForeign|SetFormulaName|SetGradientFill|SetOption|SetPositionSize|SetSortColumns|SetTradeDelays|ShellExecute|sign|Signal|sin|sinh|Sort|sqrt|StaticVarCompareExchange|StaticVarCount|StaticVarGenerateRanks|StaticVarGet|StaticVarGetRankedSymbols|StaticVarGetText|StaticVarInfo|StaticVarRemove|StaticVarSet|StaticVarSetText|Status|StdErr|StDev|StochD|StochK|StrCount|StrExtract|StrFind|StrFormat|StrLeft|StrLen|StrMid|StrReplace|StrRight|StrSort|StrToDateTime|StrToLower|StrToNum|StrToUpper|StrTrim|Study|Sum|tan|tanh|TEMA|ThreadSleep|TimeFrameCompress|TimeFrameExpand|TimeFrameGetPrice|TimeFrameMode|TimeFrameRestore|TimeFrameSet|TimeNum|Trin|TRIX|Trough|TroughBars|TSF|Ultimate|UncIssues|UncVolume|ValueWhen|VarGet|VarGetText|VarSet|VarSetText|Version|Wilders|WMA|WriteIf|WriteVal|XYChartAddPoint|XYChartSetAxis|Year|ZIG|_DEFAULT_NAME|_DT|_N|_PARAM_VALUES|_SECTION_BEGIN|_SECTION_END|_SECTION_NAME|_TRACE)\b
+- comment: Logical Operators
+  name: keyword.operator.afl
+  match: (?i)\b(NOT|AND|OR)
+- comment: AFL Functions
+  name: support.function.afl
+  match: (?i)\b()
+- comment: AFL Class
+- comment: AFL Types
+  name: support.type.afl
+  match: (?i)\b(Open|High|Low|Close|Volume|OpenInt|Average|O|H|L|C|V|OI|A)\b
+- comment: AFL Variables
+- comment: AFL Other
+- include: 'source.js'
+...
+
