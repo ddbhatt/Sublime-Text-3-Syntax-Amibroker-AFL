@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>afl</string>
+	</array>
+	<key>name</key>
+	<string>Amibroker AFL</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>comment</key>
+			<string>Pre Processors</string>
+			<key>match</key>
+			<string>(?i)^\s*(#(include_once|include|pragma).*$)</string>
+			<key>name</key>
+			<string>keyword.other.afl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Default functions</string>
+			<key>match</key>
+			<string>(?i)\b(abs|AccDist|acos|AddColumn|AddRankColumn|AddSummaryRows|AddTextColumn|AddToComposite|ADLine|AdvIssues|AdvVolume|ADX|AlertIf|AlmostEqual|AMA|AMA2|ApplyStop|Asc|asin|atan|atan2|ATR|BarIndex|BarsSince|BBandBot|BBandTop|BeginValue|CategoryAddSymbol|CategoryCreate|CategoryFind|CategoryGetName|CategoryGetSymbols|CategoryRemoveSymbol|CategorySetName|CCI|ceil|Chaikin|ClipboardGet|ClipboardSet|ColorBlend|ColorHSB|ColorRGB|Correlation|cos|cosh|CreateObject|CreateStaticObject|Cross|Cum|Date|DateNum|DateTime|DateTimeAdd|DateTimeConvert|DateTimeDiff|DateTimeToStr|Day|DayOfWeek|DayOfYear|DaysSince1900|DecIssues|DecVolume|DEMA|EMA|EnableRotationalTrading|EnableScript|EnableTextOutput|EncodeColor|EndValue|Equity|Error|EXP|ExRem|ExRemSpan|fclose|fdelete|fdir|feof|FFT|fgets|fgetstatus|FIR|FirstVisibleValue|Flip|floor|fmkdir|fopen|Foreign|fputs|frac|frmdir|FullName|GapDown|GapUp|GetAsyncKeyState|GetBacktesterObject|GetBaseIndex|GetCategorySymbols|GetChartBkColor|GetChartID|GetCursorMouseButtons|GetCursorXPosition|GetCursorYPosition|GetDatabaseName|GetExtraData|GetFnData|GetFormulaPath|GetOption|GetPerformanceCounter|GetPlaybackDateTime|GetPriceStyle|GetRTData|GetRTDataForeign|GetScriptObject|GetTradingInterface|GfxArc|GfxChord|GfxCircle|GfxDrawText|GfxEllipse|GfxGetTextWidth|GfxGradientRect|GfxLineTo|GfxMoveTo|GfxPie|GfxPolygon|GfxPolyline|GfxRectangle|GfxRoundRect|GfxSelectFont|GfxSelectPen|GfxSelectSolidBrush|GfxSetBkColor|GfxSetBkMode|GfxSetCoordsMode|GfxSetOverlayMode|GfxSetPixel|GfxSetTextAlign|GfxSetTextColor|GfxSetZOrder|GfxTextOut|GicsID|GroupID|HHV|HHVBars|Highest|HighestBars|HighestSince|HighestSinceBars|HighestVisibleValue|HMA|Hold|Hour|IcbID|IIf|IndustryID|InGICS|InICB|Inside|Int|Interval|InWatchList|InWatchListName|IsContinuous|IsEmpty|IsFavorite|IsFinite|IsIndex|IsNan|IsNull|IsTrue|LastValue|LastVisibleValue|LineArray|LinearReg|LinRegIntercept|LinRegSlope|LLV|LLVBars|log|log10|Lookup|Lowest|LowestBars|LowestSince|LowestSinceBars|LowestVisibleValue|MA|MACD|MarketID|Max|MDI|Median|MFI|MicroSec|MilliSec|Min|Minute|Month|mtRandom|mtRandomA|Name|NoteGet|NoteSet|Now|NullCount|NumToStr|NVI|Nz|OBV|Optimize|OptimizerSetEngine|OptimizerSetOption|OscP|OscV|Outside|Param|ParamColor|ParamDate|ParamField|ParamList|ParamStr|ParamStyle|ParamTime|ParamToggle|ParamTrigger|PDI|Peak|PeakBars|Percentile|PercentRank|PlaySound|Plot|PlotForeign|PlotGrid|PlotOHLC|PlotShapes|PlotText|PlotTextSetFont|PlotVAPOverlay|PlotVAPOverlayA|PopupWindow|Prec|Prefs|printf|PVI|Random|Ref|RelStrength|RequestTimedRefresh|RestorePriceArrays|Reverse|RMI|ROC|Round|RSI|RWI|RWIHi|RWILo|SAR|Say|Second|SectorID|SelectedValue|SendEmail|SetBacktestMode|SetBarFillColor|SetBarsRequired|SetChartBkColor|SetChartBkGradientFill|SetChartOptions|SetCustomBacktestProc|SetForeign|SetFormulaName|SetGradientFill|SetOption|SetPositionSize|SetSortColumns|SetTradeDelays|ShellExecute|sign|Signal|sin|sinh|Sort|sqrt|StaticVarCompareExchange|StaticVarCount|StaticVarGenerateRanks|StaticVarGet|StaticVarGetRankedSymbols|StaticVarGetText|StaticVarInfo|StaticVarRemove|StaticVarSet|StaticVarSetText|Status|StdErr|StDev|StochD|StochK|StrCount|StrExtract|StrFind|StrFormat|StrLeft|StrLen|StrMid|StrReplace|StrRight|StrSort|StrToDateTime|StrToLower|StrToNum|StrToUpper|StrTrim|Study|Sum|tan|tanh|TEMA|ThreadSleep|TimeFrameCompress|TimeFrameExpand|TimeFrameGetPrice|TimeFrameMode|TimeFrameRestore|TimeFrameSet|TimeNum|Trin|TRIX|Trough|TroughBars|TSF|Ultimate|UncIssues|UncVolume|ValueWhen|VarGet|VarGetText|VarSet|VarSetText|Version|Wilders|WMA|WriteIf|WriteVal|XYChartAddPoint|XYChartSetAxis|Year|ZIG|_DEFAULT_NAME|_DT|_N|_PARAM_VALUES|_SECTION_BEGIN|_SECTION_END|_SECTION_NAME|_TRACE)\b</string>
+			<key>name</key>
+			<string>keyword.other.afl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Logical Operators</string>
+			<key>match</key>
+			<string>(?i)\b(NOT|AND|OR)</string>
+			<key>name</key>
+			<string>keyword.operator.afl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>AFL Functions</string>
+			<key>match</key>
+			<string>(?i)\b()</string>
+			<key>name</key>
+			<string>support.function.afl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>AFL Class</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>AFL Types</string>
+			<key>match</key>
+			<string>(?i)\b(Open|High|Low|Close|Volume|OpenInt|Average|O|H|L|C|V|OI|A)\b</string>
+			<key>name</key>
+			<string>support.type.afl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>AFL Variables</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>AFL Other</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>source.js</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.afl</string>
+	<key>uuid</key>
+	<string>a7eb1086-5594-43ff-9fb8-0ef1545d2825</string>
+</dict>
+</plist>
